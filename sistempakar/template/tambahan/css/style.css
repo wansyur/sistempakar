@@ -1,0 +1,664 @@
+html {
+   height: 100%;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+body {
+   min-height: 100%;
+   margin: 0;
+   padding: 0;
+   font: 14px/1.5 'FontAwesome', Monaco, Monospace, sans-serif;
+   line-height: 1.5;
+   background: #dddddd;
+   //background: radial-gradient(circle, #ffffff, #ddeeee, #bbcccc);
+   //background: linear-gradient(90deg, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.75) 0%), url('../gambar/pustaka.jpeg');
+   text-align: center;
+}
+
+/* Dipakai dimana saja */
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+i {
+   text-decoration: none;
+   font-style: normal;
+}
+
+/* Header  Header  Header  Header  Header  Header */
+header {
+   margin: auto;
+   overflow: hidden;
+   background: rgba(40, 40, 40, 1);
+   color: #ffffff;
+   border-bottom: #10aaff 1px solid;
+   position: relative;
+}
+
+header #kiri {
+   float: left;
+   padding: 10px;
+}
+
+header #kiri a {
+   color: #ffffff;
+   font-size: 16px;
+}
+
+header #kiri a:hover {
+   color: #10aaff;
+   transition: 0.25s ease;
+}
+
+header nav {
+   float: right;
+   padding: 10px;
+}
+
+header nav ul li {
+   float: left;
+   margin: 0 10px 0 10px;
+}
+
+header nav ul li a:hover {
+   color: #10ffaa;
+   transition: 0.25s ease;
+}
+
+header nav ul li a {
+   color: #ffffff;
+}
+
+header .sorot {
+   color: #10aaff;
+}
+
+#forum-notif {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   overflow: auto;
+   //background: rgba(0, 0, 0, 0.25);
+   padding-top: 250px;
+   padding-left: 500px;
+   font: 12px 'FontAwesome';
+   text-align: left;
+}
+
+#forum-notif .forum-form {
+   background: rgba(40, 40, 40, 0.75);
+   color: #ffffff;
+   padding: 20px;
+   width: 326px;
+   border-color: rgba(10, 200, 255, 0.75);
+   //border: 3px 0 3px 0;
+   border-bottom: #10aaff 3px solid;
+   border-top: #10aaff 3px solid;
+   //border-radius: 10px;
+   animation: forum 0.5s ease-in-out forwards;
+}
+
+#forum-notif a i {
+   float: right;
+   font-size: 14px;
+   color: #10aaff;
+}
+
+
+#forum-notif a i:hover {
+   color: #ff1010;
+   transition: 0.25s ease-in-out;
+}
+
+#akun-session {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   //background: rgba(0, 0, 0, 0.25);
+   padding-top: 200px;
+   font: 12px 'FontAwesome';
+   text-align: left;
+}
+
+
+#akun-session .akun-animasi {
+   float: right;
+   margin: -190px 10px 0 1200px;
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
+#akun-session .akun-animasi ul li {
+   width: 150px;
+   padding: 2px;
+   margin-right: 10px;
+   padding-right: 8px;
+   border-radius: 16px;
+   margin-top: 8px;
+   background: rgba(40, 40, 40, 0.75);
+   box-shadow: 0 0 0 2px rgba(40, 40, 40, 1);
+   color: #ffffff;
+}
+
+#akun-session .akun-animasi ul li:hover {
+   box-shadow: 0 0 0 2px rgba(10, 200, 255, 1);
+   transition: 0.25s ease-in-out;
+}
+
+#akun-session .akun-animasi ul li button {
+   padding: 5px 7px 5px 7px;
+   border-radius: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   border-color: rgba(0, 0, 0, 0. 75);
+}
+
+#akun-session .akun-animasi ul li button:hover {
+   border-color: rgba(10, 200, 255, 0.75);
+   color: rgba(10, 200, 255, 0.75);
+   transition: 0.25s ease-in-out;
+}
+
+.akun-animasi li:nth-child(1) {
+   animation: akun 0.3s ease-in-out forwards;
+}
+.akun-animasi li:nth-child(2) {
+   animation: akun 0.6s ease-in-out forwards;
+}
+.akun-animasi li:nth-child(3) {
+   animation: akun 0.9s ease-in-out forwards;
+}
+.akun-animasi li:nth-child(4) {
+   animation: akun 1.2s ease-in-out forwards;
+}
+.akun-animasi li:nth-child(5) {
+   animation: akun 1.5s ease-in-out forwards;
+}
+
+@keyframes akun {
+   //from {transform: scale(0)}
+   //to {transform: scale(1)}
+   from {
+      opacity: 0;
+      transform: translateY(50px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes forum {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+
+
+
+
+
+
+/* Soal Soal  Soal  Soal  Soal  Soal  */
+#soal {
+   margin: auto;
+   color: #404040;
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   padding-bottom: 20px;
+}
+
+#soal .kiri {
+   float: left;
+   padding-left: 20px;
+}
+
+#soal .kiri h1 {
+   justify-content: center;
+}
+
+#soal .kiri .nomor {
+   height: 510px;
+   overflow: hidden;
+}
+
+#soal .kiri .nomor ul {
+   text-align: center;
+   list-style: none;
+   overflow: auto;
+}
+
+#soal .kiri .nomor ul li {
+   padding-top: 5px;
+}
+
+#soal .kiri .nomor ul li a {
+   text-decoration: none;
+   color: #ffffff;
+}
+
+#soal .kiri .nomor ul li a button {
+   margin: 0;
+   padding: 10px 12px 10px 12px;
+   border-radius: 100%;
+   background: rgba(0, 0, 0, 0.75);
+   border-color: rgba(0, 0, 0, 0.75);
+   transition: 0.5s ease-in-out;
+}
+
+#soal .kiri .nomor ul li a button:hover {
+   background: rgba(0, 0, 0, 0.5);
+   border-color: rgba(10, 200, 255, 0.75);
+   -webkit-transition: 0.70s;
+   -moz-transition: 0.70s;
+   -ms-transition: 0.70s;
+   -o-transition: 0.70s;
+   -webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg);
+   -o-transform: rotate(360deg);
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+   transition: 0.5s ease-in-out;
+}
+
+#soal .tengah {
+   float: left;
+   width: 60%;
+   text-align: center;
+}
+
+#soal .kanan {
+   float: left;
+   width: 32%;
+   text-align: center;
+}
+
+#soal .jawaban {
+  float: left;
+  margin-left: 20px;
+}
+
+#soal .submit {
+  float: center;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(0, 0, 0, 0.75);
+  border-color: rgba(0, 0, 0, 0.75);
+}
+
+#soal .submit:hover {
+   border-color: rgba(10, 200, 255, 0.75);
+   transition: 0.25s ease-in-out;
+}
+
+
+#soal-02, #soal-03, #soal-04, #soal-05, #soal-06, #soal-07, #soal-08, #soal-09, #soal-10,
+#soal-11, #soal-12, #soal-13, #soal-14, #soal-15, #soal-16, #soal-17, #soal-18, #soal-19, #soal-20 {
+   display: none;
+}
+
+#soal .kanan hr {
+  margin: 20px 0 20px 0;
+  width: 90%;
+  text-align: center;
+}
+
+.pilihan {
+   display: inline;
+   background: rgba(40, 40, 40, 1);
+   color: #ffffff;
+   padding: 10px;
+   margin: 10px;
+   border: #10aaff 1px solid;
+   border-radius: 25px;
+}
+
+.ikuti-konten {
+   position: fixed;
+   float: left;
+   top: 53%;
+   left: 5%;
+   width: 32%;
+}
+
+.ikuti-konten ul {
+   margin: 0;
+   padding: 0;
+}
+
+.ikuti-konten ul li {
+   display: inline;
+}
+
+.ikuti-konten ul {
+   margin: 0;
+   padding-top: 180px;
+}
+
+.ikuti-konten ul li {
+   display: inline;
+   padding: 30px;
+}
+
+.ikuti-konten ul li a {
+   font-size: 48px;
+   color: rgba(40, 40, 40, 0.75);
+   text-shadow: 2px 2px 4px rgba(10, 200, 255, 0.5);
+}
+
+
+/* Footer Footer Footer Footer Footer Footer */
+
+footer {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: rgba(40, 40, 40, 1);
+   color: #ffffff;
+   border-top: #10aaff 1px solid;
+   padding-top: 10px;
+   height: 40px;
+   padding-bottom: 8px;
+  text-align: center;
+}
+
+footer .kiri {
+   float: left;
+   padding-left: 20px;
+}
+
+footer .kanan {
+   float: right;
+   padding-right: 20px;
+}
+
+
+
+/* Forum Forum  Forum  Forum  Forum  Forum  */
+#forum {
+   padding: 20px 0 20px 0;
+   margin: auto;
+   overflow: hidden;
+   color: #404040;
+}
+
+#forum .status {
+   float: left;
+   padding: 20px;
+   background: #404040;
+   color: #ffffff;
+   border: #10aaff 1px solid;
+   border-radius: 5px;
+
+}
+
+#forum .bahasan {
+   float: right;
+   width: 80%;
+   text-align: center;
+   padding-right: 40px;
+}
+
+/* Saran Saran Saran Saran Saran Saran */
+#saran {
+   margin: auto;
+   overflow: hidden;
+   color: #404040;
+   background-size: cover;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   padding-bottom: 20px;
+   text-align: center
+}
+
+.unggah-gambar {
+   display: block;
+   margin-top: 50px;
+}
+
+.box {
+   display: inline-block;
+   margin: 5px;
+   padding: 2px;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
+   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tampil-gambar {
+   width: 200px;
+   height: 200px;
+   background-image: url("../gambar/200.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.tampil-gambar.bawaan::after {
+   display: none;
+}
+
+.ikon-unggah {
+   display: none;
+}
+
+.fa-plus {
+   content: "\f040";
+   font-family: 'FontAwesome';
+   float: left;
+   margin: 10px;
+   background: rgba(0, 0, 0, 0.2);
+   width: 22px;
+   height: 22px;
+   margin-bottom: 0;
+   border-radius: 100%;
+   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.75);
+   cursor: pointer;
+   transition: all 0.2s ease-in-out; 
+}
+
+.fa-plus:hover {
+   transition: 0.70s;
+   -webkit-transition: 0.70s;
+   -moz-transition: 0.70s;
+   -ms-transition: 0.70s;
+   -o-transition: 0.70s;
+   -webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg);
+   -o-transform: rotate(360deg);
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+   box-shadow: 0 0 2px 1px rgba(10, 200, 255, 0.75);
+}
+
+.drop {
+   display: block;
+   position: absolute;
+   background: rgba(95, 158, 160, 0.2);
+   border-radius: 100%;
+   -webkit-transform: scale(0);
+   transform: scale(0);
+}
+
+.animate {
+   -webkit-animation: ripple 0.4s linear;
+   animation: ripple 0.4s linear;
+}
+
+@-webkit-keyframes ripple {
+   100% {
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+      transform: scale(2.5);
+   }
+}
+
+@keyframes ripple {
+   100% {
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+      transform: scale(2.5);
+   }
+}
+
+#saran form textarea {
+   width: 816px;
+   font-size: 12px;
+   padding: 20px;
+   background: rgba(40, 40, 40, 0.5);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
+   border: solid 2px #cccccc;
+   margin-bottom: 30px;
+   margin-top: 10px;
+}
+
+#saran form input[type='submit'] {
+   display: none;
+}
+
+#saran form .fa-share-square {
+   padding: 15px;
+   background: rgba(0, 0, 0, 0.5);
+   box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.5);
+   color: #ffffff;
+   font: 36px;
+}
+
+#saran form .fa-share-square:hover {
+   box-shadow: 0 0 3px 3px rgba(10, 200, 255, 0.5);
+   color: #10aaff;
+   transition: all 0.2s ease-in-out; 
+}
+
+
+
+/* Tentang Tentang  Tentang  Tentang  Tentang  Tentang   */
+#tentang {
+   width: 75%;
+   height: 650px;
+   padding-top: 20px;
+   margin: auto;
+   overflow: hidden;
+   background: rgba(0, 0, 0, 0.05);
+   color: #404040;
+   box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+   text-align: center;
+}
+
+#tentang .tentang-konten {
+   color: #ffffff;
+}
+
+#tentang .tentang-navigasi {
+   text-align: center;
+}
+
+#tentang .tentang-navigasi ul {
+   margin: 0;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#tentang .tentang-navigasi ul li {
+   display: inline;
+   padding: 5px;
+}
+
+#tentang .tentang-navigasi ul li a {
+   font-size: 24px;
+   text-decoration: none;
+}
+
+#tentang .tentang-navigasi ul li a button {
+   background: rgba(40, 40, 40, 0.5);
+   width: 120px;
+   height: 30px;
+   border-radius: 25px;
+   border-color: rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#tentang .tentang-navigasi ul li a button:hover {
+   color: #10aaff;
+   box-shadow: 0 0 2px 2px rgba(10, 200, 255, 0.4);
+   transition: 0.25s ease;
+}
+
+
+/* Pustaka Pustaka Pustaka Pustaka Pustaka Pustaka */
+#pustaka {
+   margin: 20px 0 20px 0;
+   margin: auto;
+   overflow: hidden;
+   color: #404040;
+}
+
+#pustaka .pustaka-kiri {
+   background: rgba(40, 40, 40, 0.1);
+   float: left;
+   width: 20%;
+   height: 650px;
+   padding-left: 20px;
+   box-shadow: 5px 0 2px rgba(0,0,0,0.4);
+   text-align: left;
+}
+
+#pustaka .pustaka-kiri ol {
+   list-style: none;
+   padding-left: 20px;
+}
+
+#pustaka .pustaka-kiri ol li a {
+   color: #404040;
+}
+
+#pustaka .pustaka-kiri ol li a:hover {
+   color: #10aaff;
+   transition: 0.25s ease-in-out;
+}
+
+#pustaka .pustaka-kanan {
+   float: left;
+   width: 70%;
+   margin-left: 50px;
+}
+
+
+
+
+@media (max-width:768px) {
+   .toggle{
+      display: block;
+   }
+
+   ul {
+      width: 100%;
+   }
+
+   ul li {
+      display: block;
+      text-align: center;
+   }
+}

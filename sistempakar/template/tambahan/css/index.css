@@ -1,0 +1,320 @@
+input[type=text], input[type=password] {
+   width: 90%;
+   padding: 12px 20px;
+   margin: 8px 26px;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   font-size: 16px;
+}
+
+.img-container {
+   text-align: center;
+   margin: 24px 0 12px 0;
+   position: relative;
+}
+
+.avatar {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
+.close {
+   position: absolute;
+   right: 25px;
+   top: 0;
+   color: #fff;
+   font-size: 35px;
+   font-weight: bold;
+}
+
+.close:hover, .close:focus {
+   color: red;
+   cursor: pointer;
+}
+
+a {
+   text-decoration: none;
+   color: #fff;
+   transition: 0.5s ease;
+}
+
+a:hover {
+   color: #624ce4;
+}
+
+
+
+
+
+/* Awal Awal Awal Awal Awal Awal */
+#depan {
+   position: absolute;
+   width: 100%;
+   left: 50%;
+   padding: 20px;
+   top: 0;
+   transform: translate(-50%,0%);
+   -ms-transform: translate(-50%,0%);
+   color: #ffffff;
+   text-align: center;
+}
+
+#depan .versi-kiri {
+   float: left;
+}
+
+#depan .versi-kanan {
+   float: right;
+}
+
+#depan .jarak-label {
+   padding-top: 100px;
+}
+
+#depan .tombol-session {
+   margin-top: 200px;
+   display: inline-block;
+   padding: 15px 30px 15px 30px;
+   font-size: 20px;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+   outline: none;
+   color: #fff;
+   background: rgba(0, 0, 0, 0.5);
+   border: 1px solid #ffffff;
+}
+
+#depan .tombol-session:hover {
+   background-color: #624ce4;
+}
+
+#depan .tombol-session:active {
+   background-color: #624ce4;
+   transform: translateY(4px);
+}
+
+#depan .modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.5)
+}
+
+#depan .modal .animasi {
+   margin: 4% auto 4% auto;
+   border: 1px solid #888;
+   padding: 1px;
+   max-width: 500px;
+   border-radius: 4px;
+   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+   transition: 0.5s ease;
+   background: rgba(0, 0, 0, 0.75);
+}
+
+#depan .modal .animasi:hover {
+   box-shadow: 0 0 40px 16px rgba(18, 18, 18, 1);
+}
+
+#depan .modal .animasi ul {
+   list-style: none;
+   padding: 0;
+   margin: 0 0 10px 0;
+}
+
+#depan .modal .animasi ul:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+#depan .modal .animasi ul li a{
+   display: block;
+   text-decoration: none;
+   padding: 10px;
+   background: #624ce4;
+   color: #fff;
+   font-size: 20px;
+   float: left;
+   width: 50%;
+   text-align: center;
+   cursor: pointer;
+   transition: 0.5s ease;
+}
+
+#depan .modal .animasi ul li a:hover{
+   background: #cc4523;
+   color: #fff;
+}
+
+.aktif {
+   background: #000;
+   color: #fff;
+}
+
+#signup {
+   display: none;
+}
+
+#login {
+   display: block;
+}
+
+#login h1 {
+   margin-bottom: 50px;
+}
+
+
+#tab-konten h1 {
+   text-align: center;
+   color: #fff;
+   font-weight: 300;
+}
+
+#tab-konten .satu {
+   position: absolute;
+   transform: translateY(px);
+   top: 0;
+   left: 32px;
+   color: rgba(255, 255, 255, 0.7);
+   transition: all 0.25s ease;
+   pointer-events: none;
+   font-size: 12px;
+}
+
+#tab-konten .dua {
+   position: absolute;
+   transform: translateY(8px);
+   top: 0;
+   left: 32px;
+   color: rgba(255, 255, 255, 0.7);
+   transition: all 0.25s ease;
+   pointer-events: none;
+   font-size: 12px;
+}
+
+#tab-konten input {
+   font-size: 22px;
+   display: block;
+   padding: 5px 5px;
+   background: none;
+   background-image: none;
+   color: #fff;
+   border-radius: 0;
+   transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#tab-konten input:focus ~ label,
+#tab-konten input:valid ~ label {
+   top: -20px;
+   left: 32px;
+   outline: 0;
+   color: #624ce4;
+   font-size: 12px;
+}
+
+#tab-konten .top-row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+#tab-konten .top-row > div {
+   float: left;
+   width: 48%;
+   margin-right: -1%;
+}
+
+#tab-konten .top-row > div:last-child {
+   margin: 0;
+}
+
+#tab-konten .field-wrap {
+   position: relative;
+   margin-bottom: 20px;
+}
+
+#tab-konten button {
+   border: 0;
+   outline: none;
+   border-radius: 0;
+   padding: 10px 0;
+   font-size: 2rem;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   background: #624ce4;
+   color: #fff;
+   transition: all 0.5s ease;
+}
+
+#tab-konten button:hover, #tab-konten button:focus {
+   background: #624ce4;
+}
+
+#tab-konten .tombol-block {
+   display: block;
+   margin-top: 18px;
+   width: 100%;
+}
+
+#tab-konten .tombol-block:hover {
+   background: #cc4523;
+}
+
+#tab-konten .lupa {
+   margin-top: 20px;
+   text-align: rigth;
+   margin-bottom: 10px;
+   padding-right: 25px;
+   text-align: right;
+}
+
+.animasi {
+   animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+   from {
+      opacity: 0;
+      transform: scale(0);
+   }
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+
+
+#slideshow {
+   padding: 0;
+   margin: 0;
+   color: white;
+}
+
+#slideshow img {
+   width: 100%;
+   height: 710px;
+}
+
+#slideshow .sembunyi {
+   display: none;
+}
+
+#slideshow .w3-left, .w3-right, .w3-badge {
+   cursor: pointer;
+}
+
+#slideshow .w3-badge {
+   height: 13px;
+   width: 13px;
+   padding: 0;
+}
+ 
