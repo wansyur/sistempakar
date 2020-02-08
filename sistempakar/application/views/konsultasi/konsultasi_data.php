@@ -32,73 +32,73 @@
 				<div class="form-group">						
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">Apakah nyeri panggul diawal kehamilan</label>
+					<label><input name="cekbox[]" type="checkbox" value="">Apakah nyeri panggul diawal kehamilan</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">Ada pendarahan yang keluar dari vagina ?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">Ada pendarahan yang keluar dari vagina ?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah nyeri pada perut bawah?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah nyeri pada perut bawah?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah cepat merasa lelah dan lemah yang ekstrim?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah cepat merasa lelah dan lemah yang ekstrim?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah nyeri atau rasa terbakar saat buang air kecil?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah nyeri atau rasa terbakar saat buang air kecil?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah urinyang berbau tidak enak atau terlihat keruh kemerahan?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah urinyang berbau tidak enak atau terlihat keruh kemerahan?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah bengkak diwajah atau sekitar mata ?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah bengkak diwajah atau sekitar mata ?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah tekanan darah tinggi?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah tekanan darah tinggi?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah peningkatan gula darah dan punya riwayat keluarga diabetes?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah peningkatan gula darah dan punya riwayat keluarga diabetes?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah mengalami mual dan muntah parah persisten selama kehamilan?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah mengalami mual dan muntah parah persisten selama kehamilan?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah menyebabkan penurunan berat badan?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah menyebabkan penurunan berat badan?</label>
 
 					</div>
 
 					<div class="checkbox">
 
-					<label><input type="checkbox" value="">apakah mengalami dehidrasi terus menerus?</label>
+					<label><input name="cekbox[]" type="checkbox" value="">apakah mengalami dehidrasi terus menerus?</label>
 
 					</div>
 					<br/>
@@ -122,7 +122,6 @@
 				<?php 
 				// if($konsultasi->id_gejala)
 				
-
 				
 				?>
 					 

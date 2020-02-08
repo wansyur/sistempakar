@@ -50,53 +50,65 @@ class konsultasi extends MY_Controller {
 
     public function insert()
     {
-        if(isset($_POST['save'])) {
+        if(isset($_POST['submit'])) {
+			$data['penyakit']      = $this->Mod_penyakit->getAll();
+			//function validas
+			$this->template->load('layoutbackend', 'konsultasi/data',$data);
+		}
+		// 	$nom=1;
+		// 	$ins=0;
+		// 	while($nom==1){
+		// 		$dat[$ins]=$this->input->post('cekbox');
+		// 		$ins=$ins+1;
+		// 		if($ins==11){
+		// 			$nom=0;
+		// 		}
+		// 	}
+		// 	echo $dat[4];
 
-            //function validasi
-			
-			
+						
 
-            //apabila user mengkosongkan form input
-            if($this->form_validation->run()==true){
-			// echo "masuk"; die();
-				// echo "berhasil"; die();
-				$kond =$this->input->post('iff');
+        //     //apabila user mengkosongkan form input
+        //     if($this->form_validation->run()==true){
+		// 	// echo "masuk"; die();
+		// 		// echo "berhasil"; die();
+		// 		$kond =$this->input->post('iff');
 				
-				if($kond == "ifyes"){
-					$this->db->where("ifyes", $kond);
-					$id_gej=$this->db->get("gejala");
-				}else if ($kond == "ifno"){
-					$this->db->where("ifno", $kond);
-					$id_gej=$this->db->get("gejala");
-				}
-				$pertny = $this->Mod_konsultasi->cekpertanyaan($id_gej["id_gejala"]);
-				if($pertny->num_rows() > 0){
+		// 		if($kond == "ifyes"){
+		// 			$this->db->where("ifyes", $kond);
+		// 			$id_gej=$this->db->get("gejala");
+		// 		}else if ($kond == "ifno"){
+		// 			$this->db->where("ifno", $kond);
+		// 			$id_gej=$this->db->get("gejala");
+		// 		}
+		// 		$pertny = $this->Mod_konsultasi->cekpertanyaan($id_gej["id_gejala"]);
+		// 		if($pertny->num_rows() > 0){
 					
-					$this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $pertny); 
-				}
-				else{
+		// 			$this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $pertny); 
+		// 		}
+		// 		else{
 
-				}
+		// 		}
 						
 				
-				redirect('buku/index/create-success');
+		// 		redirect('Dashboard');
 
-			}
-                    //apabila tidak ada gambar yg diupload
-			else{
-				$data['message'] = "<div class='alert alert-block alert-danger'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<p><strong><i class='icon-ok'></i>Gambar</strong> Masih Kosong...!</p></div>"; 
-				$this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $data);
-			} 
-        }
+		// 	}
+        //             //apabila tidak ada gambar yg diupload
+		// 	else{
+		// 		$data['message'] = "<div class='alert alert-block alert-danger'>
+		// 		<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+		// 		<p><strong><i class='icon-ok'></i>Gambar</strong> Masih Kosong...!</p></div>"; 
+		// 		$this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $data);
+		// 	} 
+        // }
             
             
-            //jika tidak mengkosongkan form
-            // else{
-            //     $data['message'] = "";
-            //     $this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $data);
-            // }
+        //     //jika tidak mengkosongkan form
+        //     // else{
+        //     //     $data['message'] = "";
+        //     //     $this->template->load('layoutbackend', 'konsultasi/konsultasi_create', $data);
+        //     // }
 
 		
          
